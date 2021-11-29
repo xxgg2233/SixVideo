@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>“新六艺”视频教学网</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/zerogrid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsiveslides.css" />
+    <link href='images/favicon.ico' rel='icon' type='image/x-icon' />
+    <script src="../Scripts/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div id="logo">
+                    <a href="">
+                        <img src="../images/logo.png" /></a>
+                </div>
+                <div id="search">
+                    <div class="button-search"></div>
+                    <input type="text" value="Search..." onfocus="if (this.value == &#39;Search...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search...&#39;;}">
+                </div>
+                <div class="row">
+                    <div class="auto-style1">
+                        <asp:HyperLink ID="login" runat="server" NavigateUrl="BackG/Default.aspx" CssClass="auto-style2">进入后台</asp:HyperLink>
+                        <a href="javascript:addFavorite()"><span class="glyphicon glyphicon-heart"></span><b class="auto-style2">加入收藏</b></a>
+                    </div>
+                </div>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="../Default.aspx">&emsp;首页&emsp;</a></li>
+                    <li><a href="../sixartNews.aspx?tp=礼">礼仪（礼）</a></li>
+                    <li><a href="../sixartNews.aspx?tp=乐">审美（乐）</a></li>
+                    <li><a href="../sixartNews.aspx?tp=射">运动（射）</a></li>
+                    <li><a href="../sixartNews.aspx?tp=御">驾驶（御）</a></li>
+                    <li><a href="../sixartNews.aspx?tp=书">表达（书）</a></li>
+                    <li><a href="../sixartNews.aspx?tp=数">思维（数）</a></li>
+                    <li><a href="../Login.aspx">登录/注册</a></li>
+                </ul>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer>
+                <div class="zerogrid">
+                    <div class="row wrapper">
+                        <section class="col-2-3">
+                            <div class="heading">关于我们</div>
+                            <div class="content">
+                                . You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.
+                            </div>
+                        </section>
+                        <section class="col-1-3">
+                            <div class="heading">Bookmark it !</div>
+                            <div class="content">
+                                <img src="../images/icon1.gif" />
+                                <img src="../images/icon2.gif" />
+                                <img src="../images/icon3.gif" />
+                                <img src="../images/icon4.gif" />
+                                <img src="../images/icon5.gif" />
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div id="copyright">
+                    <p>Copyright © 2021 - 路人甲</p>
+                    <p>前端参考来自<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> by Zerotheme.com</p>
+                </div>
+            </footer>
+
+            <style>
+                .copyrights {
+                    text-indent: -9999px;
+                    height: 0;
+                    line-height: 0;
+                    font-size: 0;
+                    overflow: hidden;
+                }
+
+                .auto-style1 {
+                    text-align: right;
+                }
+
+                .auto-style2 {
+                    font-size: medium;
+                }
+            </style>
+
+            <div class="copyrights" >
+                前端网站模板参考来自 <a title="网站模板">模板之家</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
